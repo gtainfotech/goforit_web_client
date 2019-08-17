@@ -4,6 +4,8 @@
         width: 75rem;
         margin: 0 auto;
         margin-bottom: 30px;
+        justify-content: space-between;
+        display: flex;
 
     }
 
