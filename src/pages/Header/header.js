@@ -1,7 +1,7 @@
 import React, {Component} from 'react';
 import './header.css';
 import Logo from '../../images/go_for_it_LOGO.svg';
-
+import{ Menu } from 'semantic-ui-react';
  
 class Header extends Component{
     render(){
@@ -17,6 +17,14 @@ class Header extends Component{
                         </div>
                         <div className="loginContainer"></div>
                      </div>
+
+                     <Menu>
+
+                        <Menu.Menu>
+                            <Menu>My name</Menu>
+                        </Menu.Menu>
+
+                     </Menu>
 
                     <nav className="">
                         <ul className='nav'>
