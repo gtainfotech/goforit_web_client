@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import './header.css';
+import './header.scss';
 import Logo from '../../images/go_for_it_LOGO.svg';
 import {Menu, Segment} from "semantic-ui-react";
 
