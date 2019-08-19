@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import Header from '../Header';
 
-import './home.css';
+import './home.scss';
 
 
 class HomePage extends Component {
