@@ -1,5 +1,8 @@
 import React, {Component} from 'react';
-import { Grid, Image, Menu, Label,Input } from 'semantic-ui-react'
+import { Grid, Image, Menu, Header, Label, Input } from 'semantic-ui-react';
+import Logo from '../../images/go_for_it_LOGO.svg';
+
+import './postlogin.scss';
 
 
 
@@ -19,7 +22,11 @@ class PostLogin extends Component{
             <div className="postLoginHome">
              <Grid>
                     <Grid.Column width={5}>
+                   
                     <Menu vertical>
+                    <Header as='h2'>
+                        <Image circular src={Logo} /> Go For It Pass
+                    </Header>
                         <Menu.Item name='Home' active={activeItem === 'inbox'} onClick={this.handleItemClick}>
                         
                         Home
@@ -32,13 +39,26 @@ class PostLogin extends Component{
                         <Menu.Item name='Loans' active={activeItem === 'updates'} onClick={this.handleItemClick}>
                         Loans
                         </Menu.Item>
-                        <Menu.Item name='Matchings' active={activeItem === 'updates'} onClick={this.handleItemClick}>
+                        <Menu.Item name='Matchings' active={activeItem === 'updates'} onClick={this.handleItemClickx}>
                         Matchings1
                         </Menu.Item>
+                        <Menu.Item name='GoWallet' active={activeItem === 'updates'} onClick={this.handleItemClickx}>
+                        Go Wallet
+                        </Menu.Item>
+                        <Menu.Item name='PublishersDesk' active={activeItem === 'updates'} onClick={this.handleItemClickx}>
+                        Publisher's Desk
+                        </Menu.Item>
+                        <Menu.Item name='MerchantsDesk' active={activeItem === 'updates'} onClick={this.handleItemClickx}>
+                        Merchant's Desk
+                        </Menu.Item>
+                        <Menu.Item name='Settings' active={activeItem === 'updates'} onClick={this.handleItemClickx}>
+                        Settings
+                        </Menu.Item>
+                        
                     </Menu>
                     </Grid.Column>
                     <Grid.Column width={11}>
-                    
+
                     </Grid.Column>
                     
              </Grid>
