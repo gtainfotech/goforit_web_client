@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import { Grid, Image, Menu, Header, Label, Input } from 'semantic-ui-react';
+import { Grid, Image, Menu, Header, Icon, Label, Input, Container, Search } from 'semantic-ui-react';
 import Logo from '../../images/go_for_it_LOGO.svg';
 
 import './postlogin.scss';
@@ -16,11 +16,15 @@ class PostLogin extends Component{
     render() {
 
         const { activeItem } = this.state
+       // const { isLoading, value, results } = this.state
 
         
         return (
+            // post login home page
             <div className="postLoginHome">
+                
              <Grid>
+                
                     <Grid.Column width={5}>
                    
                     <Menu vertical>
@@ -57,7 +61,30 @@ class PostLogin extends Component{
                         
                     </Menu>
                     </Grid.Column>
-                    <Grid.Column width={11}>
+                    <Grid.Column width={11} className='postLoginHomeContent'>
+                        <Menu>
+                            <Menu.Item><Icon name='bars' size='large' /></Menu.Item>
+                                <Menu.Menu position='right'>
+                                <Menu.Item><Icon name='bell' size='large' /></Menu.Item>
+                                <Menu.Item><Icon name='mail' size='large' /></Menu.Item>
+                                <Menu.Item><Icon name='user circle' size='large' /></Menu.Item>
+                                <Menu.Item>USERNAME</Menu.Item>
+                                </Menu.Menu>
+                        
+                        </Menu>
+
+                        <Container>
+                        <Header as='h2'>
+                            Go Search
+                        </Header>
+                        <Search
+                            input={{ icon: 'search', iconPosition: 'left' }}
+                            
+                        />                    
+
+
+
+                        </Container>
 
                     </Grid.Column>
                     
