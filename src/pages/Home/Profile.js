@@ -1,93 +1,102 @@
 import React, { Component } from "react";
+import "./profile.scss";
+import ProfilePic from "../../images/dpimage.png";
+import {
+  Container,
+  Button,
+  Checkbox,
+  Form,
+  Grid,
+  Header,
+  Image,
+  Icon
+} from "semantic-ui-react";
+const src = "../../images/dpimage.png";
+
 class Profile extends Component {
+  // state = {
+  //   src: ProfilePic
+  // };
   render() {
     return (
       <div>
-        <div class="ui grid segment">
-          <div class="ten wide column">
-            <form class="ui form">
-              <h4 class="ui dividing header">Personal Details</h4>
-              <div class="inline fields">
-                <div class="eight wide field">
-                  <label>Name</label>
-                  <input
-                    type="text"
-                    name="first-name"
-                    placeholder="First Name"
-                  />
-                </div>
+        <Container>
+          <Header as="h3" dividing>
+            Profile Information
+          </Header>
 
-                <div class="eight wide field">
-                  <input type="text" name="last-name" placeholder="Last Name" />
-                </div>
-              </div>
-              <div class="inline fields">
-                <label>Gender</label>
-                <div class="field">
-                  <div class="ui radio checkbox">
-                    <input type="radio" name="male" checked="checked" />
-                    <label>Male</label>
-                  </div>
-                </div>
-                <div class="field">
-                  <div class="ui radio checkbox">
-                    <input type="radio" name="female" />
-                    <label>Female</label>
-                  </div>
-                </div>
-              </div>
-              <div class="inline fields">
-                <div class="ten wide field">
-                  <label> Address</label>
-                  <input
-                    type="text"
-                    name="street-name"
-                    placeholder="Street Address"
-                  />
-                </div>
-                <div class="six wide field">
-                  <input type="text" name="street-name" placeholder="Apt#" />
-                </div>
-              </div>
-              <div class="inline fields">
-                <div class="eight wide field">
-                  <label> Country</label>
-                  <select class="ui fluid dropdown">
-                    <option value="">Select</option>
-                    <option value="CA">Canada</option>
-                  </select>
-                </div>
-                <div class="eight wide field">
-                  <label> State</label>
-                  <select class="ui fluid dropdown">
-                    <option value="">Select</option>
-                    <option value="ON">Ontario</option>
-                  </select>
-                </div>
-              </div>
-              <div class="inline fields">
-                <div class="ten wide field">
-                  <label> ZIP/PIN </label>
-                  <input type="text" name="pin" placeholder="ZIP/PIN Code" />
-                </div>
-              </div>
-              <div class="inline fields">
-                <div class="four wide field">
-                  <label>Phone Number</label>
-                  <input type="text" name="code" placeholder="(---)" />
-                </div>
+          <Form>
+            <Form.Group inline>
+              <Form.Input
+                label="First Name"
+                placeholder="First name"
+                width={8}
+              />
+            </Form.Group>
 
-                <div class="eight wide field">
-                  <input type="text" name="phone-number" />
-                </div>
-              </div>
-            </form>
-          </div>
-          <div class="six wide column">
-            <p>Select an image for your profile picture</p>
-            <img src="#" />
-          </div>
-        </div>
+            <Form.Group inline>
+              <Form.Input label="Last Name" placeholder="Last name" width={8} />
+            </Form.Group>
+            <Form.Group inline>
+              <label>Gender</label>
+              <Form.Radio
+                label="Male"
+                value="male"
+                // checked={value === "sm"}
+                // onChange={this.handleChange}
+              />
+              <Form.Radio
+                label="Female"
+                value="female"
+                // checked={value === "md"}
+                // onChange={this.handleChange}
+              />
+              <Form.Radio
+                label="Other"
+                value="other"
+                // checked={value === "lg"}
+                // onChange={this.handleChange}
+              />
+            </Form.Group>
+            <Form.Group inline>
+              <Form.Input label="Street  " placeholder="Street Address" />
+              <Form.Input label="Apt#" placeholder="Apt#" />
+            </Form.Group>
+            <Form.Group inline>
+              <Form.Select label="Country" placeholder="Select" />
+              <Form.Select label="State" placeholder="Select" />
+            </Form.Group>
+            <Form.Group inline>
+              <Form.Input label="PIN/ZIP " placeholder="PIN/ZIP " />
+            </Form.Group>
+            <Form.Group inline>
+              <Form.Input label="Phone" placeholder="(---)" />
+              <Form.Input placeholder="(------)" />
+            </Form.Group>
+
+            <div className="prof-img">
+              <Header size="small">Upload Profile Picture</Header>
+
+              <Image src={ProfilePic} size="small" />
+              <Button
+                content="Choose File"
+                labelPosition="left"
+                icon="file"
+                onClick={() => this.fileInputRef.current.click()}
+              />
+              <input
+                ref={this.fileInputRef}
+                type="file"
+                hidden
+                onChange={this.fileChange}
+              />
+            </div>
+            <Form.Group inline centered>
+              <Form.Button>Prev</Form.Button>
+              <Form.Button>Next</Form.Button>
+            </Form.Group>
+          </Form>
+        </Container>
       </div>
     );
   }

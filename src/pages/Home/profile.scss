@@ -1,0 +1,25 @@
+// img {
+//   width: 30%;
+//   height: 50%;
+// }
+// form {
+//   width: 50%;
+//   margin: 0 auto;
+// }
+@media (min-width: 800px) and (max-width: 1920px) {
+  form {
+    width: 100%;
+    height: 100%;
+    margin: 5rem;
+    padding-right: 2rem;
+    .prof-img {
+      position: absolute;
+      top: 0;
+      right: 5rem;
+
+      // button {
+      //   margin: 5rem;
+      // }
+    }
+  }
+}
