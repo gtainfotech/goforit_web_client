@@ -4,4 +4,46 @@
     }
 
 
+    .ui.menu .item i:hover{
+        cursor: pointer;
+    }
+
+    .ui.menu .item  i.icon{
+        color: #1f5276;
+    }
+
+    .ui.menu i.icon.bell::after{
+        position: absolute;
+        content: "2";
+        padding: 5px 3px;
+        top: -2px;
+        background-color: red;
+        color:white;
+
+    }
+
+    .homeContentContainer{
+        margin-top: 60px;
+    }
+
+    .filters{
+        border: 1px solid black;
+        height: 400px;
+
+        .headerFilter{
+            border-bottom: 1px solid black;
+            width: 100%;
+        }
+    }
+
+    .ui.menu i.icon.mail::after{
+        position: absolute;
+        content: "2";
+        padding: 5px 3px;
+        top: -2px;
+        background-color: red;
+        color:white;
+
+    }
+
 }
