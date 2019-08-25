@@ -1,22 +1,20 @@
 import React, { Component } from "react";
 import "./profile.scss";
 import ProfilePic from "../../images/dpimage.png";
-import {
-  Container,
-  Button,
-  Checkbox,
-  Form,
-  Grid,
-  Header,
-  Image,
-  Icon
-} from "semantic-ui-react";
+import { Container, Button, Form, Header, Image } from "semantic-ui-react";
+import { DateInput } from "semantic-ui-calendar-react";
 const src = "../../images/dpimage.png";
 
 class Profile extends Component {
-  // state = {
-  //   src: ProfilePic
-  // };
+  state = {
+    date: " "
+  };
+
+  handleChange = (event, { name, value }) => {
+    if (this.state.hasOwnProperty(name)) {
+      this.setState({ [name]: value });
+    }
+  };
   render() {
     return (
       <div>
@@ -59,6 +57,16 @@ class Profile extends Component {
               />
             </Form.Group>
             <Form.Group inline>
+              <DateInput
+                label="Birth Date"
+                name="date"
+                placeholder="Birth Date"
+                value={this.state.date}
+                iconPosition="right"
+                onChange={this.handleChange}
+              />
+            </Form.Group>
+            <Form.Group inline>
               <Form.Input label="Street  " placeholder="Street Address" />
               <Form.Input label="Apt#" placeholder="Apt#" />
             </Form.Group>
@@ -82,13 +90,13 @@ class Profile extends Component {
                 content="Choose File"
                 labelPosition="left"
                 icon="file"
-                onClick={() => this.fileInputRef.current.click()}
+                // onClick={() => this.fileInputRef.current.click()}
               />
               <input
-                ref={this.fileInputRef}
+                // ref={this.fileInputRef}
                 type="file"
                 hidden
-                onChange={this.fileChange}
+                // onChange={this.fileChange}
               />
             </div>
             <Form.Group inline centered>

@@ -10,12 +10,15 @@
   form {
     width: 100%;
     height: 100%;
-    margin: 5rem;
-    padding-right: 2rem;
+    //margin: 3rem;
+    padding: 2rem;
+    //border: 1px solid red;
+    background: rgb(248, 242, 242);
+
     .prof-img {
       position: absolute;
-      top: 0;
-      right: 5rem;
+      top: 2rem;
+      right: 12rem;
 
       // button {
       //   margin: 5rem;
