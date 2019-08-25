@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 import { Grid, Image, Menu, Header, Icon, Label, Input, Container, Search, } from 'semantic-ui-react';
-import Logo from '../../images/go_for_it_LOGO.svg';
+import Logo from '../../images/brandLogo.svg';
 
 import './postlogin.scss';
 
