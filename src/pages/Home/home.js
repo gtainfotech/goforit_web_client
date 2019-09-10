@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import Header from '../Header';
-import { Grid, Form, Divider, Button,Segment, Image, Menu, Icon, Label, Input, Container, Search, } from 'semantic-ui-react';
+import Footer from '../Footer';
+import { Grid, Form, Divider, Button, Label, } from 'semantic-ui-react';
 
 import './home.scss';
 
@@ -29,11 +30,15 @@ class HomePage extends Component {
                                 </Form.Field>
                                 <Divider />
 
-                                <Button>Login</Button>
+                                <Button>Login</Button> <a> Forget Password </a>
                                 <p>or</p>
+                                <a>Login with Facebook</a> <a>Login with Google</a>
+
                             </Form>
                         </Grid.Column>
                     </Grid>
+           
+                <Footer />
             </div>
 
         );
