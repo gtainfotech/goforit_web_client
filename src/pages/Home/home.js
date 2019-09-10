@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import Header from '../Header';
+import { Grid, Form, Divider, Button,Segment, Image, Menu, Icon, Label, Input, Container, Search, } from 'semantic-ui-react';
 
 import './home.scss';
 
@@ -10,14 +11,29 @@ class HomePage extends Component {
 
             <div className="homepage">
                 <Header />
-                <div className="container">
-                    <div className='siteSummary'>
-                        <p>The new way to monetize any talent or possessions you've got. And to navigate your way through life. Go ad free online;
-                            get paid to view ads, or get paid even to advertise depending on how valueable you find your ad to be to the viewer. We
-                            also provide mechant accounts with VERY low fee for those who choose not to transfer to another financial instituion.
-                    </p>
-                    </div>
-                </div>
+
+                    <Grid centered className={'gridLoginDialogue'}>
+                        <Grid.Column width={10} className={'columnLoginDialogue'}>
+                            <Form>
+                                <Form.Field>
+                                <label>Username :</label>
+                                <input type='text' placeholder='First name' />
+                                <Label pointing>Please enter a value</Label>
+                                </Form.Field>
+                                <Divider />
+
+                                <Form.Field>
+                                <label>Password :</label>
+                                <Label pointing='below'>Please enter a value</Label>
+                                <input type='text' placeholder='Last Name' />
+                                </Form.Field>
+                                <Divider />
+
+                                <Button>Login</Button>
+                                <p>or</p>
+                            </Form>
+                        </Grid.Column>
+                    </Grid>
             </div>
 
         );
