@@ -7,6 +7,22 @@ import './home.scss';
 
 
 class HomePage extends Component {
+    constructor (props) {
+        
+        super(props);
+        
+        this.state ={
+            username:'',
+            password: '',
+
+        }
+
+        this.msg = `game`;
+        
+        debugger;
+    }
+
+    
     render() {
         return (
 
@@ -18,7 +34,9 @@ class HomePage extends Component {
                             <Form>
                                 <Form.Field>
                                 <label>Username :</label>
-                                <input type='text' placeholder='First name' />
+                                <input type='text' placeholder='First name' value={this.state.value} 
+                                onChange = {(event) => this.setState({username:event.target.value})}/>
+                                
                                 <Label pointing>Please enter a value</Label>
                                 </Form.Field>
                                 <Divider />
@@ -26,11 +44,11 @@ class HomePage extends Component {
                                 <Form.Field>
                                 <label>Password :</label>
                                 <Label pointing='below'>Please enter a value</Label>
-                                <input type='text' placeholder='Last Name' />
+                                <input type='text' placeholder='Last Name' onChange = {(event) => this.setState({password:event.target.value})}/>
                                 </Form.Field>
                                 <Divider />
 
-                                <Button>Login</Button> <a> Forget Password </a>
+                                <Button onClick={(event)=> {console.log(this.state); event.preventDefault();}}>Login</Button> <a> Forget Password </a>
                                 <p>or</p>
                                 <a>Login with Facebook</a> <a>Login with Google</a>
 
